@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Temperatur omregning</title>
+</head>
+<body>
+	<form action="TemperaturServlet" method="get">
+		<fieldset>
+			<legend>Temperaturomregning</legend>
+			<p>
+				Temperatur: <input type="text" name="num" />
+			</p>
+			<p>
+				<input type="radio" name="converter" value="c2f" checked="checked" />
+				Celsius til F
+			</p>
+			<p>
+				<input type="radio" name="converter" value="f2c" /> 
+				F til Celsius
+			</p>
+			<p>
+				<input type="submit" value="regn om" />
+			</p>
+		</fieldset>
+	</form>
+</body>
+</html>
