@@ -38,7 +38,7 @@ public class TemperaturServlet extends HttpServlet {
 					convertedOutput = formatter.format((userInput * 9 / 5) + 32) + "°F";
 					userInputFormat += "°C";
 				}else {
-					Double.parseDouble("send to catch ;););)"); //dette er en cheeky løsning
+					Double.parseDouble("send to catch"); //dette er en cheeky løsning
 				}
 				out.println("<p>Temperaturomregning resultat</p>");
 				out.println("<p>" + userInputFormat + "=" + convertedOutput + "</p>");

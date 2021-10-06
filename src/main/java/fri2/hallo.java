@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.cxf.transport.commons_text.StringEscapeUtils;
 
 @WebServlet("/hallo")
 public class hallo extends HttpServlet {
@@ -19,6 +20,7 @@ public class hallo extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		
+		
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
 		out.println( "<head>"+"<meta charset=\"ISO-8859-1\">");
@@ -26,12 +28,13 @@ public class hallo extends HttpServlet {
 		out.println("</head>");
 		out.println("<body>");
 		
-		out.println("<p>Hallo "+request.getParameter("name")+"!</p>");
+		
+		out.println("<p>Hallo " + StringEscapeUtils.escapeHtml4(request.getParameter("name"))+"!</p>");
 		
 		
 		out.println("<a href=\"http://localhost:8080/friopgpreoblig3/navn.html\">gå tilbake</a>");
 		out.println("</body>");
-		out.println("</html>");		
+		out.println("</html>");
 
 	}
 
